@@ -1,7 +1,7 @@
 import addItem from "./services/addItem";
 import deleteItem from "./services/deleteItem";
 
-export default action = (arr, item, type) => {
+export default menuControl = (arr, item, type) => {
   switch (type) {
     case "add":
       return addItem(arr, item);
@@ -9,6 +9,6 @@ export default action = (arr, item, type) => {
       return deleteItem(arr, item);
 
     default:
-      throw Error("nhap sai dinh dang");
+      throw Error("Nhập sai định dạng");
   }
 };

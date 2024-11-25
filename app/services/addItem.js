@@ -1,4 +1,4 @@
-export default addItem = (array, input) => {
+export default function addItem(array, input) {
   if (typeof input !== "string") {
     throw Error("Dữ liệu nhập vào phải là chuỗi");
   }
@@ -10,9 +10,9 @@ export default addItem = (array, input) => {
   }
 
   if (array.some((entry) => entry.data === trimmedInput)) {
-    throw Error("Chuỗi đã tồn tại");
+    throw Error("Bạn vừa nhập trùng");
   }
 
   array.push({ data: trimmedInput, type: true });
   return array;
-};
+}
